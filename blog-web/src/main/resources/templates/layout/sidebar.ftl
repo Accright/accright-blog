@@ -31,7 +31,7 @@
                                 <a class="tag-icon" href="http://weibo.com/211230415" title="点击查看我的微博" target="_blank" rel="external nofollow"><i class="fa fa-weibo"></i></a>
                             </li>
                             <li class="github auto-shake">
-                                <a class="tag-icon" href="https://github.com/zhangyd-c" title="点击查看我的github" target="_blank" rel="external nofollow"><i class="fa fa-github"></i></a>
+                                <a class="tag-icon" href="https://" title="点击查看我的github" target="_blank" rel="external nofollow"><i class="fa fa-github"></i></a>
                             </li>
                         </ul>-->
                         <!-- 方案二：列表展示 -->

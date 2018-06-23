@@ -28,9 +28,6 @@ import java.util.Set;
 /**
  * websocket工具类，支持单条发送和批量发送
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @version 1.0
- * @website https://www.zhyd.me
  * @date 2018/4/18 11:48
  * @since 1.0
  */

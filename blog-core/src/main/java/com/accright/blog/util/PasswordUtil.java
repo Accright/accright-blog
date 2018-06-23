@@ -22,7 +22,6 @@ package com.accright.blog.util;
 import com.accright.blog.business.consts.CommonConst;
 
 /**
- * @author: yadong.zhang
  * @date: 2017/12/15 17:03
  */
 public class PasswordUtil {

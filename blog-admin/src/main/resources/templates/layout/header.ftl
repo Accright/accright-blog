@@ -19,7 +19,7 @@
     <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/zTree.v3/3.5.29/css/metroStyle/metroStyle.min.css" rel="stylesheet">
 
-    <link href="/assets/css/zhyd.core.css" rel="stylesheet">
+    <link href="/assets/css/blog.core.css" rel="stylesheet">
 </head>
 <body class="nav-md">
 <div class="container body">

@@ -25,9 +25,7 @@ import org.springframework.util.StringUtils;
 /**
  * 缓存key相关的工具类
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @version 1.0
- * @website https://www.zhyd.me
+
  * @date 2018/5/25 10:23
  * @since 1.0
  */

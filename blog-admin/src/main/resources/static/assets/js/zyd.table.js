@@ -23,8 +23,7 @@
  *
  * bootstrap-table工具类
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @website https://www.zhyd.me
+
  * @version 1.0
  * @date 2018-04-22
  * @since 1.0

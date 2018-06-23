@@ -21,8 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @website https://www.zhyd.me
+
  * @version 1.0
  * @date 2017-04-01
  * @since 1.0
@@ -224,7 +223,7 @@ $(function () {
     }
 
     $.websocket.open({
-        host: "ws://140.143.204.207:8443/websocket",
+        host: "ws://140.143.204.207:8211/websocket",
         reconnect: true,
         callback: function (json) {
             var onlineCount = json;

@@ -1,5 +1,7 @@
 package com.accright.blog.plugin;
 
+import com.accright.blog.framework.property.COSProperties;
+import com.accright.blog.framework.property.RedisProperties;
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.ClientConfig;
 import com.qcloud.cos.auth.BasicCOSCredentials;
@@ -8,7 +10,6 @@ import com.qcloud.cos.exception.CosClientException;
 import com.qcloud.cos.model.ObjectMetadata;
 import com.qcloud.cos.model.PutObjectResult;
 import com.qcloud.cos.region.Region;
-import com.accright.blog.framework.property.COSProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.multipart.MultipartFile;
@@ -26,6 +27,9 @@ public class COSApi {
     @Autowired
     private COSProperties cosProperties; //-- 无法取得？？？
 
+    @Autowired
+    private RedisProperties redisProperties;
+
     /**
      * 获取属性文件的值  --无法取得？？？
      */
@@ -36,6 +40,8 @@ public class COSApi {
     @Value("${cos.regionName}")
     private String regionName;
 
+    @Value("${banner.charset}")
+    private String charset;
 
     private COSCredentials cred;
     private ClientConfig clientConfig;

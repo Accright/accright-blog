@@ -1,92 +1,72 @@
-# DBlog简介
-DBlog是一款简洁美观、自适应的Java博客系统。使用springboot开发，前端使用Bootstrap。支持移动端自适应，配有完备的前台和后台管理功能。
+# 小程序简介
+一款早教类小程序，用于给2-5周岁的孩子进行启蒙教育的小程序，小程序内容简介：
+
+2到5周岁是孩子们认知的关键时期，好的启蒙认知教育可以让自己的孩子赢在起跑线上。好多宝爸宝妈苦于没有认知教育的资料，或者是有资料内容却不更新，有的根本提不起孩子的兴趣。有了这款小程序可以解决以上的问题啦。只需要拿出手机，打开小程序，最新的内容即可展现给你的孩子啦。
   
-**网站预览**    
+**小程序预览**    
  
-[https://www.zhyd.me](https://www.zhyd.me)  
+ 扫描二维码预览： ![二维码预览](http://bmob-cdn-19862.b0.upaiyun.com/2018/06/11/71502aad404a4b208018a446f7c2e632.jpg)
 
-**开源地址**   
-1. [Gitee](https://gitee.com/yadong.zhang/DBlog)    
-2. [Github](https://github.com/zhangyd-c/DBlog)    
+# 小程序截图
+ **首页：**<img src="http://bmob-cdn-19862.b0.upaiyun.com/2018/06/11/33e63c78405b999080b422dd382ea746.jpg" width=120px height=210px />
+ **个人中心：** <img src="http://bmob-cdn-19862.b0.upaiyun.com/2018/06/11/afc636ce4033f001804659f396322e3b.jpg" width=120px height=210px />
+ **认知页面：** <img src="http://bmob-cdn-19862.b0.upaiyun.com/2018/06/11/6ffcbd2b4086bf64801a2019b5527e9a.jpg" width=120px height=210px />
+ **画板页面：** <img src="http://bmob-cdn-19862.b0.upaiyun.com/2018/06/11/cc2b34b1409d1c12803a38e66728114b.jpg" width=120px height=210px />
+ **播放器页面：** <img src="http://bmob-cdn-19862.b0.upaiyun.com/2018/06/11/61b24cc44038b49a80b1dbe900340042.jpg" width=120px height=210px />
+ 
+ **还有弹钢琴，瀑布流式列表，下拉刷新和上拉加载等更多页面等你发现**
 
-## 写在前面的话
-ps: 虽然我知道，大部分人都是来了**直接下载源代码**后就潇洒的离开，并且只有等到下次**突然想到**“我天~~我得去看看DBlog这烂项目更新新功能了吗”的时候才会重新来到这儿，即使你重新来过，我估计你也只有两个选择：    
+### 项目开发环境
 
-发现更新代码了 --> 下载源码后重复上面的步骤    
-发现没更新代码 --> 直接关闭浏览器
-
-虽然我知道现实就是如此的残酷，但我还是要以我萤虫之力对各位到来的同仁发出一声诚挚的嘶吼：
-
-**如果喜欢，请多多分享！！多多Star！！fork可以，但还是请star一下！！**
-
-
-### 开发环境
-
-| 工具    | 版本或描述                |
-| ----- | -------------------- |
-| OS    | Windows 7            |
-| JDK   | 1.7+                 |
-| IDE   | IntelliJ IDEA 2017.3 |
-| Maven | 3.3.1                |
-| MySQL | 5.6.4                |
+| 工具    | 版本或描述                    |
+| ----- | --------------------          |
+| OS    | Windows 10                    |
+| IDE   | 微信小程序开发者工具1.02.1805181|
+| Bmob  | 1.4.0新版                     |
+| WX API| 5月更新版                      |
 
 ### 模块划分
 
-| 模块         | 释义                      |
-| ---------- | ----------------------- |
-| blog-core  | 核心业务类模块，提供基本的数据操作、工具处理等 |
-| blog-admin | 后台管理模块                  |
-| blog-web   | 前台模块                    |
+| 模块             | 释义                      |
+| ----------      | ----------------------- |
+| pages           | 提供本小程序的各个功能点实现  |
+| utils           | 引入的依赖 包括BmobJS依赖和WXParse解析依赖               |
+| audios&images   | 本地音视频文件打包                    |
+| styles          | 全局样式文件引入 |
+| app.js&app.json | 小程序全局定义   |
+
 
 
 ### 技术栈
 
-- Springboot 1.5.9
-- Apache Shiro 1.2.2
-- Logback
-- Redis
-- Lombok
-- Websocket
-- MySQL、Mybatis、Mapper、Pagehelper
-- Freemarker
-- Bootstrap 3.3.0
-- wangEditor
-- jQuery 1.11.1、jQuery Lazyload 1.9.7、fancybox、iCheck
-- 阿里云OSS
-- kaptcha
-- Qiniu
-- ...
+  **整体介绍**</br>
+	整体采用MVVM设计思想，利用微信提供的API，实现内容与数据的试试绑定，后台数据与前台代码与文件解耦，最大限度实现了远程控制前端内容展示，实现内容热更新。
 
+- Bmob JS 最新API，采用链式调用，代码更简洁，且可以用与开发Android和IOS端程序，方便改造 
+- 最新的微信小程序API，采用新的方式获取用户信息和分享，并且做了版本兼容
+- Wxparse 解析Html文件，使内容可控性大大提高
+
+**其他介绍**</br>
+本项目有完善的代码和设计思想的项目文档，综合了以下多个技术栈：
+
+1. 采用Bmob最新JS SDK与小程序最新规范开发，适配小程序用户权限获取和分享的多个新功能点
+2. 高度可复用的框架，完善的内容和样式远程控制，内容热升级
+3. swiper界面构建，远程加载swiper内容，灵活控制跳转，上拉加载和下拉刷新机制
+4. 全局设置控制，声音媒体前后台播放控制
+5. 图片远程加载与展示，声音的远程加载与播放,绘画文件的创建与保存
+6. 多功能界面构造示例（包括简单的钢琴，播放器，画板等）
+7. HTML文件的获取与解析，远程加载可控内容
+8. 新闻类列表的获取与详情跳转功能
+9. 其他：意见反馈机制和大量的早教类音视频资料
 
 ### 使用方法
 
-1. 使用IDE导入本项目
-2. 新建数据库`CREATE DATABASE dblog;`
-3. 导入数据库`docs/db/dblog.sql`
-4. 修改(`resources/application.yml`)配置文件
-   1. 数据库链接属性(可搜索`datasource`或定位到L.19) 
-   2. redis配置(可搜索`redis`或定位到L.69)
-   3. mail配置(可搜索`mail`或定位到L.89)
-   4. 【[七牛云](http://qiniu.com)】配置(见sys_config表中qiniu_*开头的字段)    
-   注：因为系统存在redis缓存，如果是第一次使用，可以直接修改sys_config表内容，如果不是第一次用，建议使用admin项目中的`系统配置`页面修改相关配置内容
-5. 运行项目(三种方式)
-   1. 项目根目录下执行`mvn -X clean package -Dmaven.test.skip=true`编译打包，然后执行`java -jar target/blog-web.jar`
-   2. 项目根目录下执行`mvn springboot:run`
-   3. 直接运行`BlogWebApplication.java`
-6. 浏览器访问`http://127.0.0.1:8443`
-
-
-**后台用户**
-
-_超级管理员_： 账号：root  密码：123456  （本地测试使用这个账号，admin没设置权限）
-
-_普通管理员_： 账号：admin  密码：123456
-
-_评论审核管理员_： 账号：comment-admin  密码：123456
-
-注：后台用户的创建，尽可能做到**权限最小化**
-
-更多详情，请参考【[Wiki](https://gitee.com/yadong.zhang/DBlog/wikis)】
+1. 购买本小程序，然后BMOB后台会自动拷贝数据库至账户下
+2. 打开设置，复制ApplicationID和REST API KEY,然后复制到app.js文件中第一行 Bmob初始化中，具体可参考：[Bmob小程序开发文档](http://doc.bmob.cn/data/wechat_app_new/rm/)
+3. 注册微信开发者账号，并与Bmob进行绑定，具体参考：[Bmob小程序开发文档](http://doc.bmob.cn/data/wechat_app_new/rm/)
+4. 使用微信开发者工具导入本项目，输入小程序ID进行体验
+5. 使用预览功能即可在手机上完整预览
+6. 代码改造或参考
 
 ### 更新日志
 
@@ -94,64 +74,21 @@ _评论审核管理员_： 账号：comment-admin  密码：123456
 
 **修改功能：**
 
-1. 修复后台标签等分页失败的问题
-2. 修复前台自动申请友链失败的问题
-3. 其他一些问题
+1. 修复钢琴按键延迟大问题
+2. 修复钢琴界面可左右滑动问题
+3. 其他一些bug修复
 
-
-2018-05-22
-
-**修改功能：**
-
-1. 完善shiro权限（数据库、页面）。注：需要重新执行下`sys_resources`和`sys_role_resources`两张表的`insert`语句
-2. redis配置默认不含密码（鉴于大多数朋友的redis都没有密码做此修改，不过本人 **强烈建议**设置下密码）
-
-2018-05-18
-
-**修复bug：**
-
-1. web端自动申请友链后不显示的问题
-2. config表修改后不能实时刷新的问题
-	
-**增加功能：**
-1. 网站赞赏码
-2. 百度推送功能(链接提交到百度站长平台)
-	
-**修改功能：**
-1. 百度api的ak和百度推送的token以及七牛云的配置改为通过config表管理
-3. admin模块菜单通过标签实时获取
-3. 弹窗工具类js结构调整
-
-你能看到这儿已经很不容易了，剩下的自己先摸索摸索吧，实在不行，加QQ群[190886500](http://shang.qq.com/wpa/qunwpa?idkey=9f986e9b33b1de953e1ef9a96cdeec990affd0ac7855e00ff103514de2027b60)，进群可以选择性的备注：~~欧巴群主我爱你~~(咳咳，鉴于部分群友的抗议，该备注就不用了)，麻烦大家换成：`我猜群主一定很帅`
-
-### 图片预览
-
-**前台页面**
-![PC-首页](https://gitee.com/yadong.zhang/DBlog/raw/master/docs/img/pc-index.png?v=1.0)
-![PC-文章详情页](https://gitee.com/yadong.zhang/DBlog/raw/master/docs/img/pc-detail.png?v=1.0)
-![手机](https://gitee.com/yadong.zhang/DBlog/raw/master/docs/img/m.png?v=1.0)
-**后台页面**
-![首页](https://gitee.com/yadong.zhang/DBlog/raw/master/docs/img/admin-index.png)
-![菜单](https://gitee.com/yadong.zhang/DBlog/raw/master/docs/img/admin-menu.png)
-![文章列表](https://gitee.com/yadong.zhang/DBlog/raw/master/docs/img/admin-articles.png)
-![发表文章](https://gitee.com/yadong.zhang/DBlog/raw/master/docs/img/admin-article2.png)
-![角色列表](https://gitee.com/yadong.zhang/DBlog/raw/master/docs/img/admin-role.png)
-![角色分配](https://gitee.com/yadong.zhang/DBlog/raw/master/docs/img/admin-role2.png)
-
-
- ### 生命不息，折腾不止！ 更多信息，请关注：
- 1. [我的博客](https://www.zhyd.me)
- 2. [我的微博](http://weibo.com/211230415)
- 3. [我的头条号](http://www.toutiao.com/c/user/3286958681/)
- 4. [我的mooc](http://www.imooc.com/u/1175248/articles)
-
- ### 有任何问题可以
-- [给我留言](https://www.zhyd.me/guestbook)
+### 有任何问题可以
+给我发送邮件<my_romantic_story@163.com>
 
 
 ### 开源协议
 
- [MIT](https://gitee.com/yadong.zhang/DBlog/blob/master/LICENSE)
+ [MIT](http://www.opensource.org/licenses/mit-license.php)
+ 
+ **注意事项：**
+ 源码本着开放的原则，用于部分有需求的人员学习和参考使用，请勿二次买卖！竹熊教育的名称请勿用作公开或商业用途！
+
 
 
 

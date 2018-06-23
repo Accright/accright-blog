@@ -34,8 +34,7 @@ import java.util.Date;
 /**
  * 程序启动类
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @website https://www.zhyd.me
+
  * @version 1.0
  * @date 2018/4/18 11:48
  * @since 1.0

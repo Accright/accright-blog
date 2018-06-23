@@ -33,9 +33,6 @@ import java.util.Arrays;
 /**
  * 文件操作工具类
  *
- * @author yadong.zhang email:yadong.zhang0415(a)gmail.com
- * @version 1.0
- * @website https://www.zhyd.me
  * @date 2018/01/09 17:40
  * @since 1.0
  */

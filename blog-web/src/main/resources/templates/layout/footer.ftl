@@ -106,6 +106,6 @@
     }
 </script>
 <script type="text/javascript" src="${config.staticWebSite}/js/wangEditor.min.js"></script>
-<script type="text/javascript" src="${config.staticWebSite}/js/zhyd.core.js"></script>
-<script type="text/javascript" src="${config.staticWebSite}/js/zhyd.js"></script>
-<script type="text/javascript" src="${config.staticWebSite}/js/zhyd.comment.js"></script>
+<script type="text/javascript" src="${config.staticWebSite}/js/blog.core.js"></script>
+<script type="text/javascript" src="${config.staticWebSite}/js/blog.js"></script>
+<script type="text/javascript" src="${config.staticWebSite}/js/blog.comment.js"></script>

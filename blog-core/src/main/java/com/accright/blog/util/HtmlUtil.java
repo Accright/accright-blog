@@ -28,9 +28,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * @author yadong.zhang email:yadong.zhang0415(a)gmail.com
- * @version 1.0
- * @website https://www.zhyd.me
  * @date 2018/1/19 10:32
  * @since 1.0
  */

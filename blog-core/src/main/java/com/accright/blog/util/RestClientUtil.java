@@ -32,9 +32,7 @@ import java.util.Set;
 /**
  * Http接口请求工具
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @version 1.0
- * @website https://www.zhyd.me
+
  * @date 2018/4/18 11:48
  * @since 1.0
  */

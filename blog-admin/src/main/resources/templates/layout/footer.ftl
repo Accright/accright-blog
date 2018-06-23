@@ -1,6 +1,6 @@
 <footer>
     <div class="pull-right">
-        Copyright © 2018 <a href="https://www.zhyd.me" target="_blank">yadong.zhang</a> · Powered by <a href="https://gitee.com/yadong.zhang/DBlog" title="DBlog是一款简洁美观、自适应的Java博客系统..." target="_blank"><strong>DBlog</strong></a>. All Rights Reserved. Current version is 1.0.
+        Copyright © 2018 <a href="https://www.accright.com" target="_blank">yadong.zhang</a> · Powered by <a href="" title="DBlog是一款简洁美观、自适应的Java博客系统..." target="_blank"><strong>DBlog</strong></a>. All Rights Reserved. Current version is 1.0.
     </div>
     <div class="clearfix"></div>
 </footer>
@@ -39,7 +39,7 @@
 <script src="/assets/js/wangEditor.min.js" type="text/javascript"></script>
 <script src="/assets/js/zyd.tool.js"></script>
 <script src="/assets/js/zhyd.upload-preview.js"></script>
-<script src="/assets/js/zhyd.core.js"></script>
+<script src="/assets/js/blog.core.js"></script>
 <script src="/assets/js/zyd.table.js"></script>
 </body>
 </html>

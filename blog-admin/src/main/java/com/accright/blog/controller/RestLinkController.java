@@ -39,9 +39,6 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * 友情链接
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @version 1.0
- * @website https://www.zhyd.me
  * @date 2018/4/24 14:37
  * @since 1.0
  */

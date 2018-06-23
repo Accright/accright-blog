@@ -29,8 +29,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 /**
  *
- * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
- * @website https://www.zhyd.me
+
  * @version 1.0
  * @date 2018/4/25 11:48
  * @since 1.0
@@ -41,7 +40,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @org.springframework.boot.test.IntegrationTest("server.port:0")
 public class BaseJunitTest {
 
-    protected String host = "http://140.143.204.207:8443";
+    protected String host = "http://140.143.204.207:8211";
 
     @Autowired
     protected MockMvc mvc;

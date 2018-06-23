@@ -237,7 +237,7 @@
                         if(!code){
                             return '';
                         }
-                        return '<a href="javascript:void(0);" target="_blank" onclick="window.open(\'tencent:\/\/message\/?uin=' + code + '&amp;Site=www.zhyd.me&amp;Menu=yes\')" rel="external nofollow"><i class="fa fa fa-qq fa-fw"></i></a>';
+                        return '<a href="javascript:void(0);" target="_blank" onclick="window.open(\'tencent:\/\/message\/?uin=' + code + '&amp;Site=www.accright.com&amp;Menu=yes\')" rel="external nofollow"><i class="fa fa fa-qq fa-fw"></i></a>';
                     }
                 },  {
                     field: 'remark',
