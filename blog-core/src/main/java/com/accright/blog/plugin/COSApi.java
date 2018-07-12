@@ -61,7 +61,7 @@ public class COSApi {
         // bucket的命名规则为{name}-{appid} ，此处填写的存储桶名称必须为此格式
         this.bucketName = cosProperties.getBucketName();*/
 
-        this.cred = new BasicCOSCredentials("AKIDoXElEY1aqunV1O9a5VlpiS2QccRELMep","LYrAKI9vVt57xa7YosoXGrIXaotmVr69");
+        this.cred = new BasicCOSCredentials("","");
         // 2 设置bucket的区域, COS地域的简称请参照 https://cloud.tencent.com/document/product/436/6224
         this.clientConfig = new ClientConfig(new Region("ap-beijing"));
         // 3 生成cos客户端
