@@ -26,7 +26,11 @@
                                     <img width="150" height="150" data-original="${config.staticWebSite}/img/user/11.jpg" class="img-responsive lazy-img" alt="${item.title?if_exists}">
                                 </#if>
                             </a>
-                            <span class="cat"><a href="${config.siteUrl}/type/${item.typeId?c}">${item.type.name}</a></span>
+                            <#if item.original?string('true','false') == 'true'>
+                                <span class="cat"><a href="${config.staticWebSite}/original/${item.original?c}">原创</a></span>
+                            <#else>
+                                <span class="cat"><a href="${config.staticWebSite}/original/${item.original?c}">转载</a></span>
+                            </#if>
                         </figure>
                         <header class="entry-header">
                             <h2 class="entry-title">
@@ -49,7 +53,7 @@
                             </span>
                             <div class="clear"></div>
                             <span class="entry-more">
-                                <a href="${config.siteUrl}/article/${item.id?c}" rel="bookmark" title="点击查看文章详情" data-toggle="tooltip" data-placement="bottom">阅读全文</a>
+                                <a href="${config.siteUrl}/type/${item.typeId?c}" rel="bookmark" title="点击查看${item.type.name}分类下所有文章" data-toggle="tooltip" data-placement="bottom">${item.type.name}</a>
                             </span>
                         </div>
                     </article>
@@ -82,7 +86,6 @@
                             <li><a class="pointer" rel="external nofollow"><span class="label label-success">Linux</span></a></li>
                             <li><a class="pointer" rel="external nofollow"><span class="label label-info">Maven</span></a></li>
                             <li><a class="pointer" rel="external nofollow"><span class="label label-warning">Bootstrap</span></a></li>
-                            <li><a class="pointer" rel="external nofollow"><span class="label label-danger">阿里云</span></a></li>
                         </ul>
                     </form>
                 </article>

@@ -8,7 +8,7 @@
         </div>
         <!--天气预报界面-->
         <div class="menu-topmenu-container pull-right">
-            <iframe allowtransparency="true" frameborder="0" width="631" height="28" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=0&v=0&d=3&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=731&h=28&align=right"></iframe>
+            <iframe allowtransparency="true" frameborder="0" width="650" height="28" scrolling="no" src="//tianqi.2345.com/plugin/widget/index.htm?s=3&z=1&t=0&v=0&d=3&bd=0&k=&f=&ltf=009944&htf=cc0000&q=1&e=1&a=1&c=54511&w=731&h=28&align=right"></iframe>
         </div>
     </div>
 </nav>

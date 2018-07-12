@@ -19,7 +19,6 @@
  */
 package com.accright.blog.controller;
 
-import com.github.pagehelper.PageInfo;
 import com.accright.blog.business.entity.Article;
 import com.accright.blog.business.enums.ArticleStatusEnum;
 import com.accright.blog.business.service.BizArticleArchivesService;
@@ -28,6 +27,7 @@ import com.accright.blog.business.service.SysLinkService;
 import com.accright.blog.business.service.SysUpdateRecordeService;
 import com.accright.blog.business.vo.ArticleConditionVO;
 import com.accright.blog.util.ResultUtil;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -142,6 +142,23 @@ public class RenderController {
         vo.setPageNumber(pageNumber);
         model.addAttribute("url", "type/" + typeId);
         loadIndexPage(vo, model);
+
+        return ResultUtil.view(INDEX_URL);
+    }
+
+    /**
+     * 根据来源获取所有该来源的文章 true 原创 false 转载
+     * @param original
+     * @param model
+     * @return
+     */
+    @GetMapping("/original/{original}")
+    public ModelAndView original(@PathVariable("original") Boolean original,Model model)
+    {
+        ArticleConditionVO vo = new ArticleConditionVO();
+        vo.setOriginal(original);
+        model.addAttribute("url","original/"+original);
+        loadIndexPage(vo,model);
 
         return ResultUtil.view(INDEX_URL);
     }

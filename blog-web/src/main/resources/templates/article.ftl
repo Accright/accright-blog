@@ -81,7 +81,7 @@
                             </span>
                         </a>
                     <#else >
-                        <a href="javascript:void(0)" rel="nofollow prev">
+                        <a href="javascript:void(0)" rel="nofollow prev" disabled="true">
                             <span class="meta-nav" data-original-title="已经到第一篇了" data-toggle="tooltip" data-placement="bottom"><span class="post-nav"><i class="fa fa-angle-left"></i> 上一篇</span>
                                 <br>已经到第一篇了
                             </span>
@@ -94,7 +94,7 @@
                             </span>
                         </a>
                     <#else >
-                        <a href="${config.siteUrl}/article/1" rel="nofollow next">
+                        <a href="#" rel="nofollow next" disabled="true">
                             <span class="meta-nav" data-original-title="已经到最后一篇了" data-toggle="tooltip" data-placement="bottom"><span class="post-nav">下一篇 <i class="fa fa-angle-right"></i></span>
                                 <br>已经到最后一篇了
                             </span>
@@ -110,6 +110,4 @@
         <#include "layout/sidebar.ftl"/>
     </div>
 </div>
-<@footer>
-    <#--<script src="https://v1.hitokoto.cn/?encode=js&c=d&select=%23hitokoto" defer></script>-->
-</@footer>
+<@footer></@footer>

@@ -192,10 +192,7 @@ $.extend({
                                     '        <div class="sign">' +
                                     '            <i class="icons os-' + comment.osShortName + '"></i>'+ comment.os +' <i class="sepa"></i>' +
                                     '            <i class="icons browser-' + comment.browserShortName + '"></i>' + comment.browser + ' <i class="sepa"></i>' +
-                                    '            <a href="javascript:void(0);" class="comment-up" onclick="$.comment.praise(' + comment.id + ', this)"><i class="fa fa-thumbs-o-up"></i>赞(<span class="count">' + comment.support + '</span>)<i class="sepa"></i></a>' +
-                                    '            <a href="javascript:void(0);" class="comment-down" onclick="$.comment.step(' + comment.id + ', this)"><i class="fa fa-thumbs-o-down"></i>踩(<span class="count">' + comment.oppose + '</span>)<i class="sepa"></i></a>' +
                                     '            <a href="javascript:void(0);" class="comment-reply" onclick="$.comment.reply(' + comment.id + ', this)"><i class="fa fa-reply"></i>回复</a>' +
-                                    '            <a href="javascript:void(0);" class="comment-flag hide" onclick="$.comment.report(' + comment.id + ', this)"><i class="fa fa-flag"></i>举报</a>' +
                                     '        </div>' +
                                     '    </div>' +
                                     '</li>';

@@ -38,7 +38,7 @@
     }
 
     $.websocket.open({
-        host: "ws://140.143.204.207:8211/websocket",
+        host: "ws://www.zhuxiongjiaoyu.com/websocket",
         reconnect: true,
         callback: setMessageInnerHTML
     });

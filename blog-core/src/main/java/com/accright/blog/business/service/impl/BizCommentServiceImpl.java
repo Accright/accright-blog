@@ -105,7 +105,7 @@ public class BizCommentServiceImpl implements BizCommentService {
      * @return
      */
     @Override
-//    @RedisCache
+//  @RedisCache
     public Map<String, Object> list(CommentConditionVO vo) {
         PageInfo pageInfo = findPageBreakByCondition(vo);
         Map<String, Object> map = new HashMap<>();

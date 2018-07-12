@@ -96,6 +96,9 @@
         <if test="typeId != null">
             AND	a.type_id = #{typeId}
         </if>
+		<if test="original != null">
+			AND	a.original = #{original}
+		</if>
 		<choose>
 			<when test="tagIds != null">
 				AND atag.tag_id IN (

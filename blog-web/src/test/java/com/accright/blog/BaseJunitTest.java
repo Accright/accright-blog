@@ -40,7 +40,7 @@ import org.springframework.test.web.servlet.MockMvc;
 @org.springframework.boot.test.IntegrationTest("server.port:0")
 public class BaseJunitTest {
 
-    protected String host = "http://140.143.204.207:8211";
+    protected String host = "http://www.zhuxiongjiaoyu.com";
 
     @Autowired
     protected MockMvc mvc;

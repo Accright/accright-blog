@@ -76,6 +76,9 @@
             <h5>稻dao草re人n</h5>
             <div>
                 <p style="white-space: initial;">闲来无事，淡淡来书</p>
+                <p>
+                    <a href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action" target="_blank" title="" data-toggle="tooltip" data-placement="bottom" rel="external nofollow" data-original-title="查看备案信息">	鲁ICP备18030331号-1</a>
+                </p>
                 <a href="${config.siteUrl}/disclaimer" title="免责声明" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-file-o fa-fw"></i>免责声明</a>
             </div>
         </div>
@@ -83,7 +86,7 @@
 </div>
 <footer class="footer">
     <div class="clear">
-        <p>Copyright&copy;2016-${.now?string("yyyy")} ${config.siteName} · Powered by <a href="https://gitee.com/yadong.zhang/DBlog" title="DBlog是一款简洁美观、自适应的Java博客系统..." data-toggle="tooltip" data-placement="right" target="_blank"><strong>DBlog</strong></a> · <a href="http://tongji.baidu.com/web/welcome/ico?s=590226d2f4ffbf051442eb75f37333c9" target="_blank" title="点击查看${config.siteName}网站统计详情" data-toggle="tooltip" data-placement="right" rel="external nofollow"><i class="fa fa-bar-chart-o fa-fw fa-spin"></i>网站统计</a></p>
+        <p>Copyright&copy;2016-${.now?string("yyyy")} ${config.siteName} · Powered by <a href="https://github.com/Accright/AccRightBlog" title="DBlog是一款简洁美观、自适应的Java博客系统..." data-toggle="tooltip" data-placement="right" target="_blank"><strong>DBlog</strong></a> · <a href="http://tongji.baidu.com/web/welcome/ico?s=590226d2f4ffbf051442eb75f37333c9" target="_blank" title="点击查看${config.siteName}网站统计详情" data-toggle="tooltip" data-placement="right" rel="external nofollow"><i class="fa fa-bar-chart-o fa-fw fa-spin"></i>网站统计</a></p>
     </div>
 </footer>
 <a class="to-top" title="点击返回顶部" data-toggle="tooltip" data-placement="bottom"></a>
