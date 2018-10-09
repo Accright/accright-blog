@@ -103,7 +103,6 @@
             re.sort ASC,
             node.sort ASC
     </select>
-
     <select id="queryResourcesListWithSelected" parameterType="Long" resultMap="rm">
 		SELECT
             re.id,
