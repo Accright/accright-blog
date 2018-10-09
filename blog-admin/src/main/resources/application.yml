@@ -136,6 +136,6 @@ app:
     #COS配置
 ####################################自定义配置##########################################
 cos:
-    secretId: AKIDoXElEY1aqunV1O9a5VlpiS2QccRELMep
-    secretKey: LYrAKI9vVt57xa7YosoXGrIXaotmVr69
-    regionName: ap-beijing-1
+    secretId: 
+    secretKey: 
+    regionName: 

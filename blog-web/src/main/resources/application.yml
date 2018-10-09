@@ -136,4 +136,4 @@ app:
     enableKaptcha: false
 ####################################自定义配置##########################################
 cos:
-    secretId: AKIDoXElEY1aqunV1O9a5VlpiS2QccRELMep
+    secretId: 
