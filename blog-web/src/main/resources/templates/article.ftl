@@ -6,7 +6,7 @@
 </@header>
 
 <#if article.coverImage?exists>
-    <img src="${config.qiuniuBasePath}${article.coverImage?if_exists}" onerror="this.src='${config.staticWebSite}/img/pandaEdu-wx.jpg'" style="display: none;" id="cover-img">
+    <img src="${config.qiuniuBasePath}${article.coverImage?if_exists}" onerror="this.src='${config.staticWebSite}/img/zqgs-wx.jpg'" style="display: none;" id="cover-img">
 </#if>
 <div class="container custome-container">
     <nav class="breadcrumb">

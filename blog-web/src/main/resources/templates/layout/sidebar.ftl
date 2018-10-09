@@ -13,7 +13,7 @@
                 <div id="feed_widget">
                     <div class="feed-about">
                         <div class="about-main">
-                            <div class="about-img"><a href="${config.staticWebSite}/img/pandaEdu-wx.jpg" class="showImage" title="我的小程序"><img src="${config.staticWebSite}/img/pandaEdu-wx.jpg" alt="我的小程序"></a></div>
+                            <div class="about-img"><a href="${config.staticWebSite}/img/zqgs-wx.jpg" class="showImage" title="我的小程序"><img src="${config.staticWebSite}/img/zqgs-wx.jpg" alt="我的小程序"></a></div>
                             <div class="about-name" style="text-align: center">${config.siteName}</div>
                             <div class="about-the" style="text-align: center">${config.siteDesc?if_exists}</div>
                         </div>
@@ -36,9 +36,14 @@
                         </ul>-->
                         <!-- 方案二：列表展示 -->
                         <ul class="list-unstyled">
-                            <li style="text-align: center"><i class="fa fa-info-circle fa-fw"></i>博主：<small>稻dao草re人n</small></li>
-                            <li style="text-align: center"><i class="fa fa-home fa-fw"></i>Git：<small>www.github.com/AccRight</small></li>
-                            <li style="text-align: center"><i class="fa fa-envelope-square fa-fw"></i>邮箱：<small>my_romantic_story@163.com</small></li>
+                            <li style="text-align: center"><i class="fa fa-info-circle fa-fw"></i><small>稻dao草re人n</small></li>
+                            <li style="text-align: center"><i class="fa fa-home fa-fw"></i><small><a target="_blank" href="https://www.github.com/AccRight" title="我的GitHub" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">www.github.com/AccRight</a></small></li>
+                            <li style="text-align: center">
+                                <i class="fa fa-envelope-square fa-fw"></i>
+                                <small>
+                                    <a target="_blank" href="mailto:my_romantic_story@163.com" title="点击给我发邮件" data-toggle="tooltip" data-placement="bottom" rel="external nofollow">my_romantic_story@163.com</a>
+                                </small>
+                            </li>
                         </ul>
                     </div>
                 </div>
