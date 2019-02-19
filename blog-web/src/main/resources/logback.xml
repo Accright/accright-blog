@@ -12,7 +12,8 @@
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 按天回滚 daily -->
             <!-- log.dir 在maven profile里配置 -->
-            <fileNamePattern>/home/logs/www/zhyd/error-%d{yyyy-MM-dd}.log
+            <!--<fileNamePattern>/home/logs/www/zhyd/error-%d{yyyy-MM-dd}.log-->
+            <fileNamePattern>/Users/accright/Documents/blog-project/accright-blog/error-%d{yyyy-MM-dd}.log
             </fileNamePattern>
             <!-- 日志最大的历史 7天 -->
             <maxHistory>7</maxHistory>
