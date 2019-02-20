@@ -48,7 +48,7 @@ public class COSApi {
     private COSClient cosclient;
     private String bucketName = "";
 
-    private static final String BUCKET_URL = "https://springboot-blog-1256194683.cosbj.myqcloud.com/";
+    private static final String BUCKET_URL = "";
     //构造函数
     private COSApi()
     {
@@ -67,7 +67,7 @@ public class COSApi {
         // 3 生成cos客户端
         this.cosclient = new COSClient(cred, clientConfig);
         // bucket的命名规则为{name}-{appid} ，此处填写的存储桶名称必须为此格式
-        this.bucketName = "springboot-blog-1256194683";
+        this.bucketName = "";
 
     }
 
@@ -89,7 +89,7 @@ public class COSApi {
 
         String fileName = file.getOriginalFilename();//获取上传文件的名称用于获取后缀
         String prex = fileName.substring(fileName.lastIndexOf("."));//获取文件的后缀
-        String key = new Date().getTime() + prex;//设置文件的key
+        String key = System.currentTimeMillis() + prex;//设置文件的key
 
         InputStream inputStream = file.getInputStream();//获取文件输入流
         ObjectMetadata objectMetadata = new ObjectMetadata();//获取文件元信息
