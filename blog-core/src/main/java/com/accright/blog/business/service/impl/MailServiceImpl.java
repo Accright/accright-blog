@@ -190,10 +190,10 @@ public class MailServiceImpl implements MailService {
             message = javaMailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             // 创建邮件发送者地址
-            InternetAddress fromAddress = new InternetAddress(MimeUtility.encodeText("网站管理员") + "<" + from + ">");
+            InternetAddress fromAddress = new InternetAddress(MimeUtility.encodeText("职前公社福利使者") + "<" + from + ">");
             helper.setFrom(fromAddress);
             // 创建邮件接收者地址
-            InternetAddress toAddress = new InternetAddress(MimeUtility.encodeText(detail.getToMailAddress()) + "<" + detail.getToMailAddress() + ">");
+            InternetAddress toAddress = new InternetAddress(MimeUtility.encodeText(detail.getToUsername()) + "<" + detail.getToMailAddress() + ">");
             helper.setTo(toAddress);
             helper.setSubject(detail.getSubject());
             // 第二个参数指定发送的是HTML格式

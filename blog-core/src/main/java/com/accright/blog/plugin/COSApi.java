@@ -48,7 +48,7 @@ public class COSApi {
     private COSClient cosclient;
     private String bucketName = "";
 
-    private static final String BUCKET_URL = "";
+    private static final String BUCKET_URL = "https://springboot-blog-1256194683.cosbj.myqcloud.com/";
     //构造函数
     private COSApi()
     {
@@ -67,7 +67,7 @@ public class COSApi {
         // 3 生成cos客户端
         this.cosclient = new COSClient(cred, clientConfig);
         // bucket的命名规则为{name}-{appid} ，此处填写的存储桶名称必须为此格式
-        this.bucketName = "";
+        this.bucketName = "springboot-blog-1256194683";
 
     }
 
