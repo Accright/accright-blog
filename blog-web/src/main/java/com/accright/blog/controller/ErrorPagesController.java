@@ -19,6 +19,8 @@
  */
 package com.accright.blog.controller;
 
+import com.accright.blog.framework.object.ResponseVO;
+import com.accright.blog.util.ResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ErrorAttributes;
@@ -31,6 +33,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.servlet.ModelAndView;
@@ -114,6 +117,13 @@ public class ErrorPagesController implements ErrorController {
         response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
         Map<String, Object> model = getErrorAttributes(request, isIncludeStackTrace(request, MediaType.TEXT_HTML));
         return new ModelAndView("error/500", model);
+    }
+
+    @RequestMapping("/wechatError")
+    @ResponseBody
+    public ResponseVO errorMsg(HttpServletRequest request, HttpServletResponse response) {
+        response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+        return ResultUtil.error("请使用小程序发送邮件！");
     }
 
     /**
