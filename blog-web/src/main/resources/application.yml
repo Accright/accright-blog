@@ -91,22 +91,26 @@ spring:
         # 指定SMTP server使用的协议，默认为: smtp
         protocol: smtp
         # 指定SMTP server host.
-        host: smtp.qq.com
-        port: 465
+        #host: smtp.qq.com
+        #port: 465
         # 指定SMTP server的用户名.
-        username: my_romantic_story@qq.com
+        #username: my_romantic_story@qq.com
         # 指定SMTP server登陆密码:
-        password: nseshkuoffbfbagh
+        #password: nseshkuoffbfbagh
         # 指定是否在启动时测试邮件服务器连接，默认为false
+        host: mail.accright.com
+        port: 25
+        username: zqgs
+        password: zq123456
         test-connection: false
         properties:
             mail.smtp.auth: true
             # 腾讯企业邮箱 下两个配置必须！！！
-            mail.smtp.ssl.enable: true
+            mail.smtp.ssl.enable: false
             mail.smtp.socketFactory.class: javax.net.ssl.SSLSocketFactory
             mail.smtp.socketFactory.port: 465
-            mail.smtp.starttls.enable: true
-            mail.smtp.starttls.required: true
+            mail.smtp.starttls.enable: false
+            mail.smtp.starttls.required: false
             mail.smtp.connectiontimeout: 50000
             mail.smtp.timeout: 30000
             mail.smtp.writetimeout: 50000
@@ -129,7 +133,6 @@ pagehelper:
     params: count=countSql
 banner:
     charset: UTF-8
-
 ####################################自定义配置##########################################
 app:
     # 是否启用kaptcha验证码

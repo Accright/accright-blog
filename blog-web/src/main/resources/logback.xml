@@ -8,7 +8,7 @@
     </appender>
     <!-- 出错日志 appender -->
     <appender name="ERROR_OUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <File>/home/logs/www/zhyd/error.log</File>
+        <File>/Users/accright/Documents/blog-project/accright-blog/1.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 按天回滚 daily -->
             <!-- log.dir 在maven profile里配置 -->
