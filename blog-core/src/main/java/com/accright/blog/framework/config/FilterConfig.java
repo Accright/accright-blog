@@ -15,12 +15,8 @@ import org.springframework.web.servlet.config.annotation.*;
 
 import java.util.List;
 
-/**
- * 配置一下邮件的过滤器类
- */
 @Configuration
 public class FilterConfig implements WebMvcConfigurer {
-
     @Override
     public void configurePathMatch(PathMatchConfigurer pathMatchConfigurer) {
 
@@ -66,6 +62,15 @@ public class FilterConfig implements WebMvcConfigurer {
 
     }
 
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @Bean
+    public FilterRegistrationBean filterRegist() {
+        FilterRegistrationBean frBean = new FilterRegistrationBean();
+        frBean.setFilter(new MailFilter());
+        frBean.addUrlPatterns("/mail/*");
+        return frBean;
+    }
+
     @Override
     public void configureViewResolvers(ViewResolverRegistry viewResolverRegistry) {
 
@@ -99,15 +104,6 @@ public class FilterConfig implements WebMvcConfigurer {
     @Override
     public void extendHandlerExceptionResolvers(List<HandlerExceptionResolver> list) {
 
-    }
-
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    @Bean
-    public FilterRegistrationBean filterRegist() {
-        FilterRegistrationBean frBean = new FilterRegistrationBean();
-        frBean.setFilter(new MailFilter());
-        frBean.addUrlPatterns("/mail");
-        return frBean;
     }
 
     @Override

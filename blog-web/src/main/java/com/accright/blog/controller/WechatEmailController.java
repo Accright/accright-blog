@@ -2,15 +2,20 @@ package com.accright.blog.controller;
 
 import com.accright.blog.business.entity.MailDetail;
 import com.accright.blog.business.service.MailService;
+import com.accright.blog.framework.config.FreeMarkerConfig;
 import com.accright.blog.framework.object.ResponseVO;
 import com.accright.blog.util.ResultUtil;
+import freemarker.template.Template;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
+import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -23,6 +28,9 @@ import java.util.regex.Pattern;
 public class WechatEmailController {
     @Autowired
     private MailService mailService;
+
+    @Autowired
+    private FreeMarkerConfigurer freeMarkerConfiger;
 
     @GetMapping("/send")
     @ResponseBody
@@ -40,9 +48,12 @@ public class WechatEmailController {
             return ResultUtil.error("邮箱不符合规则！");
         }
         try{
-            MailDetail mailDetail = new MailDetail("恭喜抽中职前公社资料大礼包！",
-                    mailAddress,"一个很好的昵称",
-                    "你好，恭喜您集齐了七龙珠，这是资料的链接密码\n链接：www.baidu.com。密码：????");
+            //发送Html格式的邮件
+            Template template = freeMarkerConfiger.getConfiguration().getTemplate("wechat-mail.ftl");
+            String text = FreeMarkerTemplateUtils.processTemplateIntoString(template, new HashMap<>());
+            MailDetail mailDetail = new MailDetail("职前公社求职大礼包！",
+                    mailAddress,mailAddress,
+                    text);
             mailService.send(mailDetail);
         }catch (Exception e){
             log.error("发送邮件出现异常！", e);

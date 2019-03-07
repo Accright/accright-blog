@@ -24,12 +24,14 @@ import com.accright.blog.business.enums.TemplateKeyEnum;
 import com.accright.blog.business.service.MailService;
 import com.accright.blog.business.service.SysConfigService;
 import com.accright.blog.business.service.SysTemplateService;
+import com.accright.blog.framework.property.MailProperties;
 import com.accright.blog.util.FreeMarkerUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSender;
+import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
@@ -57,7 +59,7 @@ import java.util.Map;
 public class MailServiceImpl implements MailService {
 
     @Autowired
-    private JavaMailSender javaMailSender;
+    private JavaMailSenderImpl javaMailSender;
     @Autowired
     private SysTemplateService templateService;
     @Autowired
@@ -65,6 +67,9 @@ public class MailServiceImpl implements MailService {
 
     @Value("${spring.mail.username}")
     private String from;
+
+    @Autowired
+    private MailProperties mailProperties;
 
     /**
      * 普通的发送
@@ -190,7 +195,7 @@ public class MailServiceImpl implements MailService {
             message = javaMailSender.createMimeMessage();
             MimeMessageHelper helper = new MimeMessageHelper(message, true);
             // 创建邮件发送者地址
-            InternetAddress fromAddress = new InternetAddress(MimeUtility.encodeText("职前公社福利使者") + "<" + from + ">");
+            InternetAddress fromAddress = new InternetAddress(MimeUtility.encodeText("职前公社") + "");
             helper.setFrom(fromAddress);
             // 创建邮件接收者地址
             InternetAddress toAddress = new InternetAddress(MimeUtility.encodeText(detail.getToUsername()) + "<" + detail.getToMailAddress() + ">");

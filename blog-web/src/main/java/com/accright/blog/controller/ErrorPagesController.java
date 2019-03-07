@@ -121,8 +121,7 @@ public class ErrorPagesController implements ErrorController {
 
     @RequestMapping("/wechatError")
     @ResponseBody
-    public ResponseVO errorMsg(HttpServletRequest request, HttpServletResponse response) {
-        response.setStatus(HttpStatus.INTERNAL_SERVER_ERROR.value());
+    public ResponseVO wechatError(HttpServletRequest request, HttpServletResponse response) {
         return ResultUtil.error("请使用小程序发送邮件！");
     }
 
