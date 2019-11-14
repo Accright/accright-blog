@@ -216,7 +216,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 /*主题内容图片均为100%宽度*/
 .blog-info-body img{
-    width: 100%;
+    /*width: 100%;*/
 }
 
 fieldset {

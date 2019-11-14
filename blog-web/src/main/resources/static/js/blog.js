@@ -139,6 +139,9 @@ var PaymentUtils = window.payment || {
 };
 $(function () {
 
+    //设置一下图片宽度
+    $(".blog-info-body img").parent().css("text-align","center");
+
     $(document).ready(function () {
         NProgress.start();
     });

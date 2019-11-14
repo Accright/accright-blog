@@ -9,12 +9,15 @@
     <!-- 出错日志 appender -->
     <appender name="ERROR_OUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <File>/Users/accright/Documents/blog-project/accright-blog/1.log</File>
+        <!--<File>/Users/wangjianfei/Documents/project-cus/project-accright-blog/accright-blog/1.log</File>-->
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 按天回滚 daily -->
             <!-- log.dir 在maven profile里配置 -->
             <!--<fileNamePattern>/home/logs/www/zhyd/error-%d{yyyy-MM-dd}.log-->
             <fileNamePattern>/Users/accright/Documents/blog-project/accright-blog/error-%d{yyyy-MM-dd}.log
             </fileNamePattern>
+            <!--<fileNamePattern>/Users/wangjianfei/Documents/project-cus/project-accright-blog/accright-blog/error-%d{yyyy-MM-dd}.log
+            </fileNamePattern>-->
             <!-- 日志最大的历史 7天 -->
             <maxHistory>7</maxHistory>
         </rollingPolicy>
