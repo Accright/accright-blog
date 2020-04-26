@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b580f0ba-432e-4809-bbf3-63ad64e8408e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users/accright/Documents/blog-project/accright-blog/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/Users/accright/Documents/blog-project/accright-blog/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web/src/main/java/com/accright/blog/BlogWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web/src/main/java/com/accright/blog/BlogWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web/src/main/resources/static/css/blog.core.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web/src/main/resources/static/css/blog.core.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web/src/main/resources/static/js/blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web/src/main/resources/static/js/blog.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web/src/main/resources/static/js/wangEditor.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web/src/main/resources/static/js/wangEditor.min.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +150,7 @@
       <workItem from="1551883011093" duration="3440000" />
       <workItem from="1551916638900" duration="49000" />
       <workItem from="1551919706392" duration="646000" />
-      <workItem from="1573703449269" duration="3381000" />
+      <workItem from="1573703449269" duration="4394000" />
     </task>
     <servers />
   </component>
