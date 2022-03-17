@@ -19,9 +19,10 @@
  */
 package com.accright.blog.framework.object;
 
+import com.accright.blog.business.enums.ResponseStatus;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.accright.blog.business.enums.ResponseStatus;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

@@ -1,11 +1,11 @@
 /**
  * MIT License
- *
  */
 package com.accright.blog.framework.config;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.stereotype.Component;
+
+import tk.mybatis.spring.annotation.MapperScan;
 
 /**
  *

@@ -19,38 +19,32 @@
  */
 package com.accright.blog.business.service.impl;
 
-import com.accright.blog.business.entity.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import com.accright.blog.business.entity.Comment;
+import com.accright.blog.business.entity.Config;
+import com.accright.blog.business.entity.Link;
+import com.accright.blog.business.entity.MailDetail;
+import com.accright.blog.business.entity.Template;
 import com.accright.blog.business.enums.TemplateKeyEnum;
 import com.accright.blog.business.service.MailService;
 import com.accright.blog.business.service.SysConfigService;
 import com.accright.blog.business.service.SysTemplateService;
 import com.accright.blog.framework.property.MailProperties;
 import com.accright.blog.util.FreeMarkerUtil;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.FileSystemResource;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeUtility;
-import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 邮件发送
  *
-
  * @date 2018/4/16 16:26
  * @since 1.0
  */
@@ -58,8 +52,6 @@ import java.util.Map;
 @Service
 public class MailServiceImpl implements MailService {
 
-    @Autowired
-    private JavaMailSenderImpl javaMailSender;
     @Autowired
     private SysTemplateService templateService;
     @Autowired
@@ -73,9 +65,6 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 普通的发送
-     *
-     * @param mailDetail
-     * @return
      */
     @Override
     @Async
@@ -85,10 +74,6 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 发送友情链接邮件通知
-     *
-     * @param link
-     * @param keyEnum
-     * @return
      */
     @Override
     @Async
@@ -110,11 +95,6 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 发送评论邮件通知
-     *
-     * @param comment
-     * @param keyEnum
-     * @param audit
-     * @return
      */
     @Override
     @Async
@@ -143,8 +123,6 @@ public class MailServiceImpl implements MailService {
 
     /**
      * 发送到管理员的友链操作通知
-     *
-     * @param link
      */
     @Override
     @Async
@@ -156,15 +134,15 @@ public class MailServiceImpl implements MailService {
         map.put("link", link);
         String mailContext = FreeMarkerUtil.template2String(temXml, map, true);
         String adminEmail = config.getAuthorEmail();
-        adminEmail = StringUtils.isEmpty(adminEmail) ? "yadong.zhang0415@gmail.com" : (adminEmail.contains("#") ? adminEmail.replace("#", "@") : adminEmail);
+        adminEmail = StringUtils.isEmpty(adminEmail) ? "yadong.zhang0415@gmail.com"
+                                                     : (adminEmail.contains("#") ? adminEmail.replace("#", "@")
+                                                                                 : adminEmail);
         MailDetail mailDetail = new MailDetail("有新的友链消息", adminEmail, config.getAuthorName(), mailContext);
         send(mailDetail);
     }
 
     /**
      * 发送到管理员的评论通知
-     *
-     * @param comment
      */
     @Override
     @Async
@@ -178,7 +156,9 @@ public class MailServiceImpl implements MailService {
         String mailContext = FreeMarkerUtil.template2String(temXml, map, true);
         String subject = "有新的评论消息";
         String adminEmail = config.getAuthorEmail();
-        adminEmail = StringUtils.isEmpty(adminEmail) ? "yadong.zhang0415@gmail.com" : (adminEmail.contains("#") ? adminEmail.replace("#", "@") : adminEmail);
+        adminEmail = StringUtils.isEmpty(adminEmail) ? "yadong.zhang0415@gmail.com"
+                                                     : (adminEmail.contains("#") ? adminEmail.replace("#", "@")
+                                                                                 : adminEmail);
         MailDetail mailDetail = new MailDetail(subject, adminEmail, config.getAuthorName(), mailContext);
         send(mailDetail);
     }
@@ -189,39 +169,6 @@ public class MailServiceImpl implements MailService {
         if (StringUtils.isEmpty(detail.getToMailAddress())) {
             log.warn("邮件接收者为空！");
             return false;
-        }
-        MimeMessage message = null;
-        try {
-            message = javaMailSender.createMimeMessage();
-            MimeMessageHelper helper = new MimeMessageHelper(message, true);
-            // 创建邮件发送者地址
-            InternetAddress fromAddress = new InternetAddress(MimeUtility.encodeText("职前公社") + "");
-            helper.setFrom(fromAddress);
-            // 创建邮件接收者地址
-            InternetAddress toAddress = new InternetAddress(MimeUtility.encodeText(detail.getToUsername()) + "<" + detail.getToMailAddress() + ">");
-            helper.setTo(toAddress);
-            helper.setSubject(detail.getSubject());
-            // 第二个参数指定发送的是HTML格式
-            helper.setText(detail.getContent(), detail.isHtml());
-            if (detail.getCc() != null && detail.getCc().length > 0) {
-                helper.setCc(detail.getCc());
-            }
-            if (detail.isExitFile()) {
-                try {
-                    List<String> filePaths = detail.getFilePaths();
-                    for (String filePath : filePaths) {
-                        // 附件 ：注意项目路径问题，自动补用项目路径
-                        FileSystemResource file = new FileSystemResource(new File(filePath));
-                        helper.addAttachment("图片.jpg", file);
-                    }
-                } catch (Exception e) {
-                    log.error("添加附件发生异常", e);
-                }
-            }
-            javaMailSender.send(message);
-            return true;
-        } catch (MessagingException | UnsupportedEncodingException e) {
-            log.error("Failed to send E-mail. e [{}]", e.getMessage());
         }
         return false;
     }
