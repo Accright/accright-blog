@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b580f0ba-432e-4809-bbf3-63ad64e8408e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog-web/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web/src/main/docker/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-admin/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/blog-web/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +159,7 @@
       <workItem from="1573703449269" duration="4394000" />
       <workItem from="1647485524767" duration="2334000" />
       <workItem from="1647850417117" duration="590000" />
-      <workItem from="1648022911785" duration="4684000" />
+      <workItem from="1648022911785" duration="5153000" />
     </task>
     <servers />
   </component>
