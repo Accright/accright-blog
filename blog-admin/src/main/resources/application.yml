@@ -111,6 +111,10 @@ spring:
       mail.smtp.timeout: 30000
       mail.smtp.writetimeout: 50000
 
+logging:
+  file:
+    path: /var/logs/
+
 # MyBatis
 mybatis:
   type-aliases-package: com.accright.blog.persistence.beans

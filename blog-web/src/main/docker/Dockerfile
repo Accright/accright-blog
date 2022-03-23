@@ -8,6 +8,6 @@ ENV TZ=Asia/Shanghai
 # 声明服务运行在8443端口
 EXPOSE 8443
 # 指定docker容器启动时运行jar包
-ENTRYPOINT ["nohup","java", "-jar","/blog-web-0.0.1-SNAPSHOT.jar","> consoleMsg.log 2>&1 &"]
+ENTRYPOINT ["java", "-jar","/blog-web-0.0.1-SNAPSHOT.jar"]
 # 指定维护者的名字
 MAINTAINER accright
