@@ -8,6 +8,6 @@ ENV TZ=Asia/Shanghai
 # 声明服务运行在8085端口
 EXPOSE 8085
 # 指定docker容器启动时运行jar包
-ENTRYPOINT ["java", "-jar","/blog-admin-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["nohup","java", "-jar","/blog-admin-0.0.1-SNAPSHOT.jar","> consoleMsg.log 2>&1 &"]
 # 指定维护者的名字
 MAINTAINER accright
