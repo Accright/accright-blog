@@ -2,7 +2,7 @@
 <#include "include/macros.ftl">
 <@header title="友情链接 | ${config.siteName}"
     keywords="${config.siteName},友情链接交换"
-    description="${config.siteName}，一个程序员的个人原创博客，友情链接交换"
+    description="${config.siteName}，一个程序员的个人原创，友情链接交换"
     canonical="/links">
 </@header>
 
@@ -19,9 +19,9 @@
                 <h4 class="bottom-line"><i class="fa fa-coffee fa-fw"></i><strong>简单的要求</strong><small> - 简单点，说话的方式简单点</small></h4>
                 <div class="link-info">
                     <ul class="list-unstyled">
-                        <li>本站定位：个人技术类博客</li>
-                        <li>本站作用：写博客、记日志、闲聊扯淡鼓捣技术</li>
-                        <li>本站 <em>优先</em> 选择<kbd>同类原创、内容相近</kbd>的博客或网站，您的站点内容可以为<kbd>技术类</kbd>、<kbd>IT科技</kbd>、<kbd>互联网</kbd>和<kbd>生活</kbd></li>
+                        <li>本站定位：个人技术类</li>
+                        <li>本站作用：写、记日志、闲聊扯淡鼓捣技术</li>
+                        <li>本站 <em>优先</em> 选择<kbd>同类原创、内容相近</kbd>的或网站，您的站点内容可以为<kbd>技术类</kbd>、<kbd>IT科技</kbd>、<kbd>互联网</kbd>和<kbd>生活</kbd></li>
                         <li>特别提醒：<abbr title="禁止友链的网站">任何包含违反国家法律法规内容的网站、盈利类（赌博）网站，还有相亲类、卖表类的网站、垃圾站统统不做！！！</abbr></li>
                         <li>
                             <blockquote>
@@ -130,7 +130,7 @@
                     </div>
                     <div class="form-group has-info">
                         <div class="input-group input-logo">
-                            <input type="text" class="form-control" name="description" placeholder="一个程序员的个人博客。心之所向，无所不能。" style="padding-left: 88px;">
+                            <input type="text" class="form-control" name="description" placeholder="一个程序员的个人。心之所向，无所不能。" style="padding-left: 88px;">
                             <span class="fa fa-commenting pull-left" aria-hidden="true" style="width: 75px;">站点描述</span>
                         </div>
                     </div>

@@ -97,7 +97,7 @@
 <footer class="footer">
     <div class="clear">
         <p>Copyright&copy;2016-${.now?string("yyyy")} ${config.siteName} · Powered by <a
-                    href="https://github.com/Accright/AccRightBlog" title="DBlog是一款简洁美观、自适应的Java博客系统..."
+                    href="https://github.com/Accright/AccRightBlog" title="DBlog是一款简洁美观、自适应的Java系统..."
                     data-toggle="tooltip" data-placement="right" target="_blank"><strong>DBlog</strong></a> · <a
                     href="http://tongji.baidu.com/web/welcome/ico?s=590226d2f4ffbf051442eb75f37333c9" target="_blank"
                     title="点击查看${config.siteName}网站统计详情" data-toggle="tooltip" data-placement="right"

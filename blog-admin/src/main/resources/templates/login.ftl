@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>登录 | DBlog博客后台管理系统</title>
+    <title>登录 | DBlog后台管理系统</title>
     <link href="/assets/images/favicon.ico" rel="icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -56,7 +56,7 @@
                                 <div class="separator">
                                     <div class="clearfix"></div>
                                     <div>
-                                        <h1><i class="fa fa-coffee"></i> DBlog博客后台管理系统</h1>
+                                        <h1><i class="fa fa-coffee"></i> DBlog后台管理系统</h1>
                                         <p>Copyright © 2018 All Rights Reserved. </p>
                                     </div>
                                 </div>

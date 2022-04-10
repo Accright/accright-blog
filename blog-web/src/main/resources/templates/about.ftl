@@ -1,6 +1,6 @@
 <#include "include/macros.ftl">
 <@header title="关于 | ${config.siteName}"
-    keywords="${config.siteName},关于博客"
+    keywords="${config.siteName},关于"
     description="闲来无事，淡淡来书 - ${config.siteName}"
     canonical="/about">
 </@header>
@@ -16,13 +16,13 @@
                 <h5 class="legend-title">博主简介</h5>
                 <div class="info">
                     <#--<p>
-                        博主并不是大牛，本站大部分代码都建立在开源博客<a href="https://gitee.com/yadong.zhang/DBlog" title="DBlog是一款简洁美观、自适应的Java博客系统..." data-toggle="tooltip" data-placement="right" target="_blank"><strong>DBlog</strong></a>的基础上，需要博客开源代码的，直接点击参考。但是本文的内容皆是博主原创，希望能给找到这些文章的人一定的帮助。
+                        博主并不是大牛，本站大部分代码都建立在开源<a href="https://gitee.com/yadong.zhang/DBlog" title="DBlog是一款简洁美观、自适应的Java系统..." data-toggle="tooltip" data-placement="right" target="_blank"><strong>DBlog</strong></a>的基础上，需要开源代码的，直接点击参考。但是本文的内容皆是博主原创，希望能给找到这些文章的人一定的帮助。
                     </p>-->
                     <p><kbd>稻dao草re人n -Accright</kbd></p>
                 </div>
-                <h5 class="legend-title">关于博客</h5>
+                <h5 class="legend-title">关于</h5>
                 <div class="info">
-                    <p>稻dao草re人n的博客，分享各种前后端技术，希望能给看到文章的人一定的帮助。</p>
+                    <p>稻dao草re人n的，分享各种前后端技术，希望能给看到文章的人一定的帮助。</p>
                     <p>闲来无事，淡淡来书</p>
                 </div>
                 <h5 class="legend-title">关于版权</h5>

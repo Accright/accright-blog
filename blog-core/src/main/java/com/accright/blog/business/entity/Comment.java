@@ -98,11 +98,11 @@ public class Comment {
         if (title == null) {
             Long sid = getSid();
             if (sid == -1) {
-                title = "留言板 | 稻dao草re人n博客";
+                title = "留言板 | 稻dao草re人n";
             } else if (sid == -2) {
-                title = "友情链接 | 稻dao草re人n博客";
+                title = "友情链接 | 稻dao草re人n";
             } else if (sid == -3) {
-                title = "关于 | 稻dao草re人n博客";
+                title = "关于 | 稻dao草re人n";
             }
         }
         return title;

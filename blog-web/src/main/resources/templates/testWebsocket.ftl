@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="${config.authorName} <${config.authorEmail}>">
-    <title>${config.siteName} | 一个程序员的个人博客</title>
+    <title>${config.siteName} | 一个程序员的个人</title>
     <link rel="canonical" href="${config.siteUrl}" />
     <#include "layout/quote.ftl">
 </head>

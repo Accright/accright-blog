@@ -54,7 +54,7 @@
                     </#if>
                 </@zhydTag>
                 <li><a href="/guestbook" class="menu_a"><i class="fa fa-comments-o"></i>留言板</a></li>
-                <li><a href="/about" class="menu_a"><i class="fa fa-info fa-fw"></i>关于博客</a></li>
+                <li><a href="/about" class="menu_a"><i class="fa fa-info fa-fw"></i>关于</a></li>
                 <#--   可以修改mine用来展示个人简历
                  <li><a href="/mine" class="menu_a"><i class="fa fa-ellipsis-v"></i>关于博主</a></li>
                 -->

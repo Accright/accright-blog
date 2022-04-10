@@ -1,7 +1,7 @@
 <#include "include/macros.ftl">
 <@header title="留言板 | ${config.siteName}"
     keywords="${config.siteName},留言板"
-    description="我的留言板,欢迎给我的个人博客留言 - ${config.siteName}"
+    description="我的留言板,欢迎给我的个人留言 - ${config.siteName}"
     canonical="/guestbook">
     <style>
         ul {

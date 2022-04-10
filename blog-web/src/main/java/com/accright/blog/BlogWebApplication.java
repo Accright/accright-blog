@@ -32,6 +32,6 @@ public class BlogWebApplication implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments applicationArguments) {
-		log.info("博客部署完成，当前时间：" + DateUtil.date2Str(new Date(), DateConst.YYYY_MM_DD_HH_MM_SS_EN));
+		log.info("部署完成，当前时间：" + DateUtil.date2Str(new Date(), DateConst.YYYY_MM_DD_HH_MM_SS_EN));
 	}
 }
