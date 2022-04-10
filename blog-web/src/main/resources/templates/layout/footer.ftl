@@ -81,7 +81,6 @@
         <div>
             <h4>关于本站</h4>
             <h5>稻dao草re人n</h5>
-            <h5>Test Ftl</h5>
             <div>
                 <p style="white-space: initial;">闲来无事，淡淡来书</p>
                 <p>
@@ -89,7 +88,6 @@
                        data-placement="bottom" rel="external nofollow" data-original-title="查看备案信息">
                         鲁ICP备18030331号-1</a>
                 </p>
-                <p>This is a Test P</p>
                 <a href="${config.siteUrl}/disclaimer" title="免责声明" data-toggle="tooltip" data-placement="bottom"><i
                             class="fa fa-file-o fa-fw"></i>免责声明</a>
             </div>
